@@ -7,10 +7,10 @@ theme: mint
 <figure class="side-by-side">
 <figcaption>
 
-<blink>We just scratch the tip of the iceberg here!</blink>
+<blink>Wir kratzen hier nur an der Spitze des Eisbergs!</blink>
 
 </figcaption>
 
-![Warning](images/attention.png)
+![Warnung](images/attention.png)
 
 </figure>

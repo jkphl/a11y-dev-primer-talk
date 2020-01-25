@@ -9,11 +9,10 @@ valign: middle
     <figcaption>
         <blockquote>
             <p><b>The power of the Web is in its universality.</b> Access by everyone regardless of
-                disability
-                is an essential aspect.</p>
+                disability is an essential aspect.</p>
             <p class="author"><a href="https://www.w3.org/standards/webdesign/accessibility" target="_blank" rel="noreferrer">Tim
                 Berners-Lee</a>,
-                inventor of the World Wide Web</p>
+                Erfinder des World Wide Web</p>
         </blockquote>
     </figcaption>
 </figure>

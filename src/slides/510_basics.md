@@ -1,15 +1,16 @@
 ---
-title: "Main Ingredients"
+title: "Zutaten für barrierefreie Websites"
 ---
-## Main Ingredients
+## Zutaten
+<p class="tagline">für barrierefreie Websites</p>
 
 <dl>
-    <dt>Semantics &amp; Structure</dt>
+    <dt>Semantik &amp; Struktur</dt>
     <dd>HTML5 + WAI-<abbr title="Accessible Rich Internet Applications">ARIA</abbr></dd>
     <dt>Design</dt>
     <dd>CSS</dd>
-    <dt>Interaction</dt>
+    <dt>Interaktion</dt>
     <dd>JavaScript</dd>
-    <dt>Content</dt>
-    <dd>Alternative media versions, easy to read language, etc.</dd>
+    <dt>Inhalt</dt>
+    <dd>Alternative Aufbereitungen, Leichte Sprache, etc.</dd>
 </dl>

@@ -2,20 +2,21 @@
 title: "Agenda"
 theme: info
 ---
-## What is he talking about?
+## Was redet der eigentlich?
 
 <dl>
-    <dt>Accessibility on the Web</dt>
+    <dt>1. Barrierefreiheit im Web</dt>
     <dd>
         <ul>
-            <li>What, for whom and why</li>
-            <li>Rules, standards &amp; legal situation</li>
-        </ul>        
+            <li>Was, für wen und warum?</li>
+            <li>Rechtslage &amp; Regelwerke</li>
+        </ul>
     </dd>
-    <dt>Getting started (as developers)</dt>
+    <dt>2. Barrierefreiheit umsetzen</dt>
     <dd>
         <ul>
-            <li>Some <strong>very basic</strong> a11y must-haves</li>
+            <li>Anforderungen gem. BITV 2.0</li>
+            <li>Herangehensweise &amp; grundlegende Techniken</li>
         </ul>
     </dd>
 </dl>

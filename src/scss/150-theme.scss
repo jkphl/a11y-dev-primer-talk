@@ -1,408 +1,456 @@
 body {
-	background-color: black;
+    background-color: black;
 }
 
 .visually-hidden {
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	white-space: nowrap; /* added line */
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
 }
 
 .handle {
-	text-transform: lowercase;
+    text-transform: lowercase;
 }
 
 .separate {
-	margin-top: 2em !important;
+    margin-top: 2em !important;
 }
 
 .author {
-	margin-top: 2em;
-	font-size: 3vmin;
-	margin-left: 24vw;
+    margin-top: 2em;
+    font-size: 3vmin;
+    margin-left: 24vw;
 }
 
 section > blockquote .author {
-	margin-left: 0;
+    margin-left: 0;
 }
 
 .slides > li {
-	overflow: hidden;
+    overflow: hidden;
 
-	ul {
-		position: relative;
-		padding-left: 1em;
-	}
+    ul {
+        position: relative;
+        padding-left: 1em;
+    }
 
-	li {
-		margin: .5em 0;
-		text-indent: 0;
+    li {
+        margin: .5em 0;
+        text-indent: 0;
 
-		&::before {
-			content: '›';
-			position: absolute;
-			left: 0;
-		}
+        &::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+        }
 
-		& li {
-			padding-left: 0;
-			list-style-type: none;
+        & li {
+            padding-left: 0;
+            list-style-type: none;
 
-			&::before {
-				content: '•';
-			}
-		}
-	}
+            &::before {
+                content: '•';
+            }
+        }
+    }
 }
 
 h3 {
-	letter-spacing: .01em;
-	color: $highlight;
-	line-height: 1.2;
-	font-weight: bold;
+    letter-spacing: .01em;
+    color: $highlight;
+    line-height: 1.2;
+    font-weight: bold;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
-	vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
 }
 
 iframe {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 cite {
-	font-style: normal;
-	line-height: 1.2;
-	font-size: 5vw;
-	display: block;
-	margin-bottom: 1em;
+    font-style: normal;
+    line-height: 1.2;
+    font-size: 5vw;
+    display: block;
+    margin-bottom: 1em;
 }
 
 abbr, cite {
-	font-weight: normal;
-	color: $highlight;
+    font-weight: normal;
+    color: $highlight;
 }
 
 strong {
-	color: $mint;
-	font-weight: normal;
-	text-decoration: underline;
-	text-decoration-style: dotted;
+    color: $highlight;
+    font-weight: normal;
+    text-decoration: underline;
+    text-decoration-style: dotted;
 }
 
 abbr {
-	text-decoration: none;
+    text-decoration: none;
 
-	&::after {
-		color: $background;
-		content: " (" attr(title) ")";
+    &::after {
+        color: $background;
+        content: " (" attr(title) ")";
 
-		.slides > li:not([data-theme]) & {
-			color: $mint;
-		}
-	}
+        .slides > li:not([data-theme]) & {
+            color: $mint;
+        }
+    }
 }
 
 twitterwidget {
-	margin-left: auto;
-	margin-right: auto;
-	transform: scale(1.5) rotate(0deg) !important;
+    margin-left: auto;
+    margin-right: auto;
+    transform: scale(1.5) rotate(0deg) !important;
 }
 
 [data-theme=secondary] {
-	background-color: $secondary !important;
+    background-color: $secondary !important;
 }
 
 [data-theme=tertiary] {
-	background-color: $tertiary !important;
+    background-color: $tertiary !important;
 }
 
 [data-theme=info] {
-	background-color: $info !important;
+    background-color: $info !important;
 }
 
 [data-theme=white] {
-	background-color: $white !important;
+    background-color: $white !important;
 }
 
 [data-theme=mint] {
-	background-color: $mint !important;
+    background-color: $mint !important;
+}
+
+[data-theme=invert] {
+    background-color: $white !important;
 }
 
 [data-theme=white],
 [data-theme=mint] {
-	*, a {
-		color: $dark !important;
-	}
+    *, a {
+        color: $dark !important;
+    }
 
-	h2::after {
-		background-color: $dark;
-	}
+    h2::after {
+        background-color: $dark;
+    }
+
+    .blend {
+        background-color: rgba(255, 255, 255, .7);
+        padding: .05em .2em;
+    }
+
+    h2 .blend {
+        padding-bottom: .2em;
+    }
+}
+
+[data-theme=invert] {
+    *, a {
+        color: $white !important;
+    }
+
+    h2::after {
+        background-color: $white;
+    }
+
+    .blend {
+        background-color: rgba(0, 0, 0, .7);
+        padding: .05em .2em;
+    }
+
+    h2 .blend {
+        padding-bottom: .2em;
+    }
 }
 
 figure {
-	width: 100%;
+    width: 100%;
 
-	& figcaption {
-		padding: 0;
-		margin: 0;
-	}
+    & figcaption {
+        padding: 0;
+        margin: 0;
+    }
 
-	&.images {
-		& ul {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			margin: 0;
-			padding: 0 !important;
-			list-style-type: none;
-		}
+    &.images {
+        & ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0 !important;
+            list-style-type: none;
+        }
 
-		& li {
-			padding: 0 !important;
-			margin: 0 0 .75em 0 !important;
-			text-indent: 0 !important;
+        & li {
+            padding: 0 !important;
+            margin: 0 0 .75em 0 !important;
+            text-indent: 0 !important;
 
-			&::before {
-				display: none;
-			}
-		}
-	}
+            &::before {
+                display: none;
+            }
+        }
+    }
 
-	&.side-by-side {
-		> p {
-			width: 80%;
-			margin-top: 1em;
-		}
+    &.side-by-side {
+        > p {
+            width: 80%;
+            margin-top: 1em;
+        }
 
-		@media (min-aspect-ratio: 2/3) {
-			display: flex;
+        @media (min-aspect-ratio: 2/3) {
+            display: flex;
 
-			> p {
-				width: 50%;
-				margin-top: 0;
-				padding-left: 1em;
-				text-align: center;
-			}
+            > p {
+                width: 50%;
+                margin-top: 0;
+                padding-left: 1em;
+                text-align: center;
+            }
 
-			> figcaption {
-				width: 50%;
-				padding-right: 1em;
-			}
+            > figcaption {
+                width: 50%;
+                padding-right: 1em;
+            }
 
-			&.two-one {
-				> p {
-					width: calc(100% / 3);
-				}
+            &.two-one {
+                > p {
+                    width: calc(100% / 3);
+                }
 
-				> figcaption {
-					width: calc(200% / 3);
-				}
-			}
-		}
-	}
+                > figcaption {
+                    width: calc(200% / 3);
+                }
+            }
+        }
+    }
 }
 
 [data-images="3"] li {
-	flex-basis: 48%;
+    flex-basis: 48%;
 
-	@media (min-aspect-ratio: 2/3) {
-		flex-basis: 31%;
-	}
+    @media (min-aspect-ratio: 2/3) {
+        flex-basis: 31%;
+    }
 }
 
 [data-images="2"] li {
-	@media (min-aspect-ratio: 2/3) {
-		flex-basis: 48%;
-	}
+    @media (min-aspect-ratio: 2/3) {
+        flex-basis: 48%;
+    }
 }
 
 h2 small {
-	font-size: 50%;
+    font-size: 50%;
 }
 
 em {
-	color: $highlight;
-	font-weight: normal;
+    color: $highlight;
+    font-weight: normal;
 }
 
 q::before {
-	content: "»";
+    content: "»";
 }
 
 q::after {
-	content: "«";
+    content: "«";
 }
 
 .polaroid div {
-	background: white;
-	position: absolute;
-	margin: 0 !important;
-	padding: .5em .5em .2em;
-	text-align: center;
-	text-decoration: none;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-	transition: all .15s linear;
-	z-index: 0;
+    background: white;
+    position: absolute;
+    margin: 0 !important;
+    padding: .5em .5em .2em;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    transition: all .15s linear;
+    z-index: 0;
 
-	&::after {
-		color: #333;
-		content: attr(title);
-		font-size: 60%;
-		display: block;
-		padding-top: .2em;
-		text-align: left;
-	}
+    &::after {
+        color: #333;
+        content: attr(title);
+        font-size: 60%;
+        display: block;
+        padding-top: .2em;
+        text-align: left;
+    }
 
-	img {
-		display: block;
-	}
+    img {
+        display: block;
+    }
 }
 
 table {
-	border-collapse: collapse;
-	margin-top: 1em;
+    border-collapse: collapse;
+    margin-top: 1em;
 }
 
 td, th {
-	width: 3em;
-	text-align: center;
-	padding: 0;
+    width: 3em;
+    text-align: center;
+    padding: 0;
 
-	&:first-child {
-		width: auto;
-		text-align: left;
-	}
+    &:first-child {
+        width: auto;
+        text-align: left;
+    }
 }
 
 footer {
-	margin-top: 3em;
+    margin-top: 3em;
 }
 
 .webaim {
-	width: 50%;
-	background-color: $white;
-	padding: 1em 0;
+    width: 50%;
+    background-color: $white;
+    padding: 1em 0;
 
-	img {
-		width: 100%;
-	}
+    img {
+        width: 100%;
+    }
 }
 
 #wcag {
-	background-image: url(images/wcag.jpg);
-	background-size: auto 90%;
-	background-position: center;
-	background-repeat: no-repeat;
+    background-image: url(images/wcag.jpg);
+    background-size: auto 90%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #job twitter-widget {
-	transform: rotate(0deg) scale(2) translateX(50%) !important;
+    transform: rotate(0deg) scale(2) translateX(50%) !important;
 }
 
 #martin-splitt {
-	background-image: url(images/martin-splitt.jpg);
-	background-size: cover;
-	background-position: top right;
-	background-repeat: no-repeat;
+    background-image: url(images/martin-splitt.jpg);
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
 }
 
 .iframe section {
-	height: 100%;
+    height: 100%;
 }
 
 iframe {
-	background-color: $white;
-	border: none;
-	height: 100%;
+    background-color: $white;
+    border: none;
+    height: 100%;
 }
 
 code {
-	background-color: $code;
-	color: $tertiary;
-	padding: 0 .2em;
+    background-color: $code;
+    color: $tertiary;
+    padding: 0 .2em;
 }
 
 pre {
-	background-color: $code;
-	color: $tertiary;
-	padding: 1em;
-	font-size: 50%;
-	width: 50%;
+    background-color: $code;
+    color: $tertiary;
+    padding: 1em;
+    font-size: 50%;
+    width: 50%;
 
-	code {
-		background-color: transparent;
-		color: inherit;
-		padding: 0;
-	}
+    code {
+        background-color: transparent;
+        color: inherit;
+        padding: 0;
+    }
 }
 
 .demo {
-	background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255, 255, 255, .8);
+}
+
+#exclusive {
+    color: $white;
+    background-image: url(images/exclusive-design.jpg);
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+#inclusive {
+    color: $white;
+    background-image: url(images/accessible-stairs.jpg);
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
 }
 
 .credit {
-	position: absolute;
-	bottom: 10vh;
-	right: 10vw;
+    position: absolute;
+    bottom: 10vh;
+    right: 10vw;
 }
 
 .slides > li > ul.labels {
-	list-style-type: none;
-	position: absolute;
-	width: auto;
-	top: 0;
-	right: 10vw;
-	margin: 0;
-	padding: 0;
-	line-height: 1;
+    list-style-type: none;
+    position: absolute;
+    width: auto;
+    top: 0;
+    right: 10vw;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
 }
 
 .slides > li > ul li {
-	display: inline;
-	padding: .2em .5em;
+    display: inline;
+    padding: .2em .5em;
 }
 
 .slides > li > ul li + li {
-	margin-left: .2em;
+    margin-left: .2em;
 }
 
 .slides > li > ul li:before {
-	content: '';
+    content: '';
 }
 
 .slides > li > ul li.html {
-	background-color: $html;
-	color: white;
+    background-color: $html;
+    color: white;
 }
 
 .slides > li > ul li.aria {
-	background-color: $aria;
-	color: white;
+    background-color: $aria;
+    color: white;
 }
 
 .slides > li > ul li.css {
-	background-color: $css;
-	color: white;
+    background-color: $css;
+    color: white;
 }
 
 .slides > li > ul li.javascript {
-	background-color: $javascript;
-	color: black;
+    background-color: $javascript;
+    color: black;
 }
 
 .slides > li > ul li.content {
-	background-color: $content;
-	color: white;
+    background-color: $content;
+    color: white;
 }
 
 ul.informal li::before {
-	display: none;
+    display: none;
 }

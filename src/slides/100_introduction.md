@@ -2,18 +2,18 @@
 title: "Introduction"
 theme: info
 ---
-## Who's that guy?
+## Wer ist der Kerl?
 
 <figure class="blockquote">
     <img src="images/joschi-kuphal-a11y.jpg"
-         alt="Portrait photo of Joschi Kuphal as a 4 year old boy"/>
+         alt="Portraitfoto von Joschi Kuphal als 4-Jähriger"/>
     <figcaption>
         <ul class="informal">
-            <li>›&nbsp;&nbsp;&nbsp;Interior Designer by training, writing code since the age of 10</li>
-            <li>›&nbsp;&nbsp;&nbsp;building websites since the mid 90s</li>
-            <li>›&nbsp;&nbsp;&nbsp;running <a href="https://tollwerk.de" target="_blank">tollwerk</a></li>
-            <li>›&nbsp;&nbsp;&nbsp;qualified WCAG tester &amp; consultant</li>
-            <li>›&nbsp;&nbsp;&nbsp;organizing events (<a href="https://a11y.club" target="_blank">Accessibility Club</a>, <a href="https://coderdojo-nbg.org" target="_blank">CoderDojo Nürnberg</a> …)</li>
+            <li>›&nbsp;&nbsp;&nbsp;Erste Codezeilen als 10-Jähriger, Websites seit 1995</li>
+            <li>›&nbsp;&nbsp;&nbsp;Ausbildung im Architektur- und Designumfeld</li>
+            <li>›&nbsp;&nbsp;&nbsp;Web- &amp; Werbeagentur <a href="https://tollwerk.de" target="_blank">tollwerk</a> in Nürnberg seit 2000</li>
+            <li>›&nbsp;&nbsp;&nbsp;Qualifizierter BITV- / WCAG-Prüfer im BITV-Test-Prüfverbund</li>
+            <li>›&nbsp;&nbsp;&nbsp;Initiator des (<a href="https://a11y.club" target="_blank">Accessibility Clubs</a>, <a href="https://coderdojo-nbg.org" target="_blank">CoderDojo Nürnberg</a> …)</li>
         </ul>
     </figcaption>
 </figure>
