@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Accessibility Primer for Web Developers — Screen Presentation, October 23rd, 2019</title>
+        <meta name="description" content="The What, the Why and the How">
+        <style>@font-face{font-family:'Neighbourhood';src:url("css/fonts/neighbourhood.eot");src:url("css/fonts/neighbourhood.eot?#iefix") format("embedded-opentype"),url("css/fonts/neighbourhood.woff2") format("woff2"),url("css/fonts/neighbourhood.woff") format("woff"),url("css/fonts/neighbourhood.ttf") format("truetype");font-weight:normal;font-style:normal}html,body{height:100%;overflow:hidden}html.miniatures,.miniatures html,body.miniatures,.miniatures body{height:auto;overflow:visible}body{overflow:hidden;background:#0f7595;color:#fff;font-family:Neighbourhood,sans-serif;font-size:4vmin;line-height:1.5}.miniatures body{cursor:default !important;padding:3vh 3vw}*{box-sizing:border-box;padding:0;margin:0}h1,h2,h3,h4,h5,h6{max-width:80vw;line-height:1;font-weight:normal}h1{font-size:12vw;line-height:.8}h2{font-size:8vw;margin:0 0 .3em -.06em;position:relative;z-index:99}h2::after{content:'';position:absolute;height:.7vmin;width:12vw;bottom:-.08em;background-color:#fff;border-radius:.35vmin}.left h2::after{left:.06em}.right h2::after{right:.06em}.center h2::after{left:50%;margin-left:-6vw}ol{margin-left:-.8em}a{color:#fff}footer a{text-decoration:none}ul{list-style-type:none}.slides{display:block;position:absolute;width:100%;height:100%;overflow:hidden;list-style-type:none;font-weight:normal;margin:0;padding:0}.miniatures .slides{position:static;display:-webkit-box;display:flex;flex-wrap:wrap;-webkit-box-pack:justify;justify-content:space-between;overflow:visible;height:auto}.slides>li{display:-webkit-box;display:flex;position:absolute;width:100vw;height:100vh;color:#fff;background-color:#0f7595;background-image:radial-gradient(ellipse farthest-corner, rgba(0,0,0,0) 0, rgba(0,0,0,0.4) 100%);opacity:0;-webkit-transition:opacity 200ms ease;transition:opacity 200ms ease;padding:10vh 10vw}.miniatures .slides>li{position:relative;display:block !important;opacity:1;box-shadow:0.5vw 0.5vw 3vw rgba(50,50,50,0.5);cursor:pointer;-webkit-transform:scale(0.3);transform:scale(0.3);margin:-34vh -36vw}.slides>li>*{width:100%;background-repeat:no-repeat}.slides>li>* section::before{content:'';display:block;position:absolute;width:100%;height:100%;top:0;left:0;background-size:cover;background-repeat:no-repeat;background-position:center center;z-index:-1}.slides>li>*>p,.slides>li>*>dl,.slides>li>*>ul,.slides>li>*>ol,.slides>li>*>div{max-width:64em}.slides>li>*>*+p,.slides>li>*>*+dl,.slides>li>*>*+ul,.slides>li>*>*+ol,.slides>li>*>*+div{margin-top:1em}.slides>li>*>ul+ul{margin-top:0}.slides>li.no-gradient{background-image:none}.slides>li.active{opacity:1;display:-webkit-box;display:flex}.slides>li.active::before{display:none}.slides>li.left{text-align:left}.slides>li.center{text-align:center}.slides>li.right{text-align:right}.slides>li.top{-webkit-box-align:start;align-items:flex-start}.slides>li.middle{-webkit-box-align:center;align-items:center}.slides>li.bottom{-webkit-box-align:end;align-items:flex-end}.slides>li li{line-height:1.4;margin:.5em 0 .5em 1em;text-indent:-1em}.slides>li li li{padding-left:1em;list-style-type:disc}.slides>li dt,.slides>li .dt{color:#ffe600;display:block}.slides>li dt{margin-top:.5em}.slides>li dd{padding-left:1em;margin-bottom:.5em}.slides>li .interactive{-webkit-transition:opacity 200ms ease-in-out;transition:opacity 200ms ease-in-out}.is-interactive .slides>li.step-0 .interactive,.is-interactive .slides>li.step-1 .interactive:nth-of-type(1n+2),.is-interactive .slides>li.step-2 .interactive:nth-of-type(1n+3),.is-interactive .slides>li.step-3 .interactive:nth-of-type(1n+4),.is-interactive .slides>li.step-4 .interactive:nth-of-type(1n+5),.is-interactive .slides>li.step-5 .interactive:nth-of-type(1n+6),.is-interactive .slides>li.step-6 .interactive:nth-of-type(1n+7),.is-interactive .slides>li.step-7 .interactive:nth-of-type(1n+8),.is-interactive .slides>li.step-8 .interactive:nth-of-type(1n+9),.is-interactive .slides>li.step-9 .interactive:nth-of-type(1n+10){opacity:0}footer{position:relative;margin-top:4em;padding-top:.8em}footer::before{content:'';position:absolute;height:.5vmin;width:12vw;top:0;background-color:#fff;border-radius:.25vmin}em{font-style:normal;font-weight:bold;color:#ffe600}.cover{position:absolute;width:100%;height:100%;top:0;left:0;background-size:cover;background-repeat:no-repeat;background-position:center center}.check{background:transparent url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20474.8%20474.801%22%20fill%3D%22%232b242b%22%3E%3Cpath%20d%3D%22M396.283%20257.097c-1.14-.575-2.282-.862-3.433-.862-2.478%200-4.661.951-6.563%202.857l-18.274%2018.271c-1.708%201.715-2.566%203.806-2.566%206.283v72.513c0%2012.565-4.463%2023.314-13.415%2032.264-8.945%208.945-19.701%2013.418-32.264%2013.418H82.226c-12.564%200-23.319-4.473-32.264-13.418-8.947-8.949-13.418-19.698-13.418-32.264V118.622c0-12.562%204.471-23.316%2013.418-32.264%208.945-8.946%2019.7-13.418%2032.264-13.418H319.77c4.188%200%208.47.571%2012.847%201.714%201.143.378%201.999.571%202.563.571%202.478%200%204.668-.949%206.57-2.852l13.99-13.99c2.282-2.281%203.142-5.043%202.566-8.276-.571-3.046-2.286-5.236-5.141-6.567-10.272-4.752-21.412-7.139-33.403-7.139H82.226c-22.65%200-42.018%208.042-58.102%2024.126C8.042%2076.613%200%2095.978%200%20118.629v237.543c0%2022.647%208.042%2042.014%2024.125%2058.098%2016.084%2016.088%2035.452%2024.13%2058.102%2024.13h237.541c22.647%200%2042.017-8.042%2058.101-24.13%2016.085-16.084%2024.134-35.45%2024.134-58.098v-90.797c-.002-3.994-1.915-6.752-5.72-8.278z%22%2F%3E%3Cpath%20d%3D%22M467.95%2093.216l-31.409-31.409c-4.568-4.567-9.996-6.851-16.279-6.851-6.275%200-11.707%202.284-16.271%206.851L219.265%20246.532l-75.084-75.089c-4.569-4.57-9.995-6.851-16.274-6.851-6.28%200-11.704%202.281-16.274%206.851l-31.405%2031.405c-4.568%204.568-6.854%209.994-6.854%2016.277%200%206.28%202.286%2011.704%206.854%2016.274l122.767%20122.767c4.569%204.571%209.995%206.851%2016.274%206.851%206.279%200%2011.704-2.279%2016.274-6.851l232.404-232.403c4.565-4.567%206.854-9.994%206.854-16.274s-2.283-11.706-6.851-16.273z%22%2F%3E%3C%2Fsvg%3E") left center no-repeat;padding-left:1.5em;background-size:auto 60%}.ref{position:absolute;bottom:10vh;left:10vw;right:10vw;opacity:.3}.tagline,.big{font-size:4vw}.very-big{font-size:7vw}.tagline{margin-top:0 !important}blockquote{margin:0}blockquote p{line-height:1.2;font-size:5vw}blockquote b{color:#ffe600}blockquote::before{font-size:40vw;content:"„";float:left;line-height:0;height:.5em;shape-outside:circle(50%);margin:-8vw 4vw 0 -6vw;color:#ffe600}blockquote .author{margin-top:2em;font-size:3vmin;margin-left:24vw}.blockquote img{float:left;max-width:20vw;border-radius:50%;margin-right:5vw;shape-outside:circle(50%)}.blockquote blockquote::before{display:none}@media print{@page{size:A4 landscape;margin:0;padding:0}html,body,.slides{height:auto;overflow:visible;margin:0;padding:0}.slides{position:static;width:297mm;height:auto}.slides>li{position:relative;display:table !important;height:210mm;opacity:1}.slides>li:first-child{display:none !important}.slides>li section ul,.slides>li section p{width:70vw}.slides>li>section::before{display:none !important}}body{background-color:black}.visually-hidden{position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px, 1px, 1px, 1px);white-space:nowrap}.handle{text-transform:lowercase}.separate{margin-top:2em !important}.author{margin-top:2em;font-size:3vmin;margin-left:24vw}section>blockquote .author{margin-left:0}.slides>li{overflow:hidden}.slides>li ul{position:relative;padding-left:1em}.slides>li li{margin:.5em 0;text-indent:0}.slides>li li::before{content:'›';position:absolute;left:0}.slides>li li li{padding-left:0;list-style-type:none}.slides>li li li::before{content:'•'}h3{letter-spacing:.01em;color:#ffe600;line-height:1.2;font-weight:bold}img{max-width:100%;height:auto;vertical-align:middle}iframe{width:100%;height:100%}cite{font-style:normal;line-height:1.2;font-size:5vw;display:block;margin-bottom:1em}abbr,cite{font-weight:normal;color:#ffe600}strong{color:#84ecff;font-weight:normal;text-decoration:underline;-webkit-text-decoration-style:dotted;text-decoration-style:dotted}abbr{text-decoration:none}abbr::after{color:#0f7595;content:" (" attr(title) ")"}.slides>li:not([data-theme]) abbr::after{color:#84ecff}twitterwidget{margin-left:auto;margin-right:auto;-webkit-transform:scale(1.5) rotate(0deg) !important;transform:scale(1.5) rotate(0deg) !important}[data-theme=secondary]{background-color:#d34 !important}[data-theme=tertiary]{background-color:#012340 !important}[data-theme=info]{background-color:#2b242b !important}[data-theme=white]{background-color:#fff !important}[data-theme=mint]{background-color:#84ecff !important}[data-theme=white] *,[data-theme=white] a,[data-theme=mint] *,[data-theme=mint] a{color:#2b242b !important}[data-theme=white] h2::after,[data-theme=mint] h2::after{background-color:#2b242b}figure{width:100%}figure figcaption{padding:0;margin:0}figure.images ul{display:-webkit-box;display:flex;flex-wrap:wrap;-webkit-box-pack:justify;justify-content:space-between;margin:0;padding:0 !important;list-style-type:none}figure.images li{padding:0 !important;margin:0 0 .75em 0 !important;text-indent:0 !important}figure.images li::before{display:none}figure.side-by-side>p{width:80%;margin-top:1em}@media (min-aspect-ratio: 2 / 3){figure.side-by-side{display:-webkit-box;display:flex}figure.side-by-side>p{width:50%;margin-top:0;padding-left:1em;text-align:center}figure.side-by-side>figcaption{width:50%;padding-right:1em}figure.side-by-side.two-one>p{width:calc(100% / 3)}figure.side-by-side.two-one>figcaption{width:calc(200% / 3)}}[data-images="3"] li{flex-basis:48%}@media (min-aspect-ratio: 2 / 3){[data-images="3"] li{flex-basis:31%}}@media (min-aspect-ratio: 2 / 3){[data-images="2"] li{flex-basis:48%}}h2 small{font-size:50%}em{color:#ffe600;font-weight:normal}q::before{content:"»"}q::after{content:"«"}.polaroid div{background:white;position:absolute;margin:0 !important;padding:.5em .5em .2em;text-align:center;text-decoration:none;box-shadow:0 4px 6px rgba(0,0,0,0.3);-webkit-transition:all .15s linear;transition:all .15s linear;z-index:0}.polaroid div::after{color:#333;content:attr(title);font-size:60%;display:block;padding-top:.2em;text-align:left}.polaroid div img{display:block}table{border-collapse:collapse;margin-top:1em}td,th{width:3em;text-align:center;padding:0}td:first-child,th:first-child{width:auto;text-align:left}footer{margin-top:3em}.webaim{width:50%;background-color:#fff;padding:1em 0}.webaim img{width:100%}#wcag{background-image:url(images/wcag.jpg);background-size:auto 90%;background-position:center;background-repeat:no-repeat}#job twitter-widget{-webkit-transform:rotate(0deg) scale(2) translateX(50%) !important;transform:rotate(0deg) scale(2) translateX(50%) !important}#martin-splitt{background-image:url(images/martin-splitt.jpg);background-size:cover;background-position:top right;background-repeat:no-repeat}.iframe section{height:100%}iframe{background-color:#fff;border:none;height:100%}code{background-color:#0195ea;color:#012340;padding:0 .2em}pre{background-color:#0195ea;color:#012340;padding:1em;font-size:50%;width:50%}pre code{background-color:transparent;color:inherit;padding:0}.demo{background-color:rgba(255,255,255,0.8)}.credit{position:absolute;bottom:10vh;right:10vw}.slides>li>ul.labels{list-style-type:none;position:absolute;width:auto;top:0;right:10vw;margin:0;padding:0;line-height:1}.slides>li>ul li{display:inline;padding:.2em .5em}.slides>li>ul li+li{margin-left:.2em}.slides>li>ul li:before{content:''}.slides>li>ul li.html{background-color:#E65127;color:white}.slides>li>ul li.aria{background-color:#090;color:white}.slides>li>ul li.css{background-color:#0C73B8;color:white}.slides>li>ul li.javascript{background-color:#E7A328;color:black}.slides>li>ul li.content{background-color:purple;color:white}ul.informal li::before{display:none}
+</style>
+    </head>
+    <body class="h-entry">
+            <ol class="slides">
+                    <li id="slide-0" class="left middle " data-title="Start">
+                            <section>
+                                <h1 id="span-aria-hiddentruea11yspanspan-classvisually-hiddenaccessibilityspan-primer-for-web-developers"><span aria-hidden="true">A11y</span><span class="visually-hidden">Accessibility</span> primer for web developers</h1>
+<p class="tagline">The What, the Why and the How</p>
+
+                                    <footer><div class="p-author h-card">
+    <span class="visually-hidden">Performed at the </span>FrankenJS<span class="visually-hidden"> meetup</span>, October 23rd, 2019<br/>
+    <span class="visually-hidden">by</span> <a href="https://jkphl.is" target="_blank" rel="me" lang="de"><span class="p-given-name">Joschi</span> <span class="p-family-name">Kuphal</span></a> <span aria-hidden="true">·</span><span class="visually-hidden"> on Twitter as </span> <a href="https://twitter.com/jkphl" rel="me" target="_blank" class="handle"><span aria-hidden="true">@</span>JKPHL</a> 
+</div></footer>
+                            </section>
+                    </li>
+                    <li id="slide-1" class="left top "
+                        data-theme="info" data-title="Introduction">
+                            <section>
+                                <h2 id="whos-that-guy">Who&#39;s that guy?</h2>
+<figure class="blockquote">
+    <img src="images/joschi-kuphal-a11y.jpg"
+         alt="Portrait photo of Joschi Kuphal as a 4 year old boy"/>
+    <figcaption>
+        <ul class="informal">
+            <li>›&nbsp;&nbsp;&nbsp;Interior Designer by training, writing code since the age of 10</li>
+            <li>›&nbsp;&nbsp;&nbsp;building websites since the mid 90s</li>
+            <li>›&nbsp;&nbsp;&nbsp;running <a href="https://tollwerk.de" target="_blank">tollwerk</a></li>
+            <li>›&nbsp;&nbsp;&nbsp;qualified WCAG tester &amp; consultant</li>
+            <li>›&nbsp;&nbsp;&nbsp;organizing events (<a href="https://a11y.club" target="_blank">Accessibility Club</a>, <a href="https://coderdojo-nbg.org" target="_blank">CoderDojo Nürnberg</a> …)</li>
+        </ul>
+    </figcaption>
+</figure>
+                            </section>
+                    </li>
+                    <li id="slide-2" class="left top "
+                        data-theme="info" data-title="Agenda">
+                            <section>
+                                <h2 id="what-is-he-talking-about">What is he talking about?</h2>
+<dl>
+    <dt>Accessibility on the Web</dt>
+    <dd>
+        <ul>
+            <li>What, for whom and why</li>
+            <li>Rules, standards &amp; legal situation</li>
+        </ul>        
+    </dd>
+    <dt>Getting started (as developers)</dt>
+    <dd>
+        <ul>
+            <li>Some <strong>very basic</strong> a11y must-haves</li>
+        </ul>
+    </dd>
+</dl>
+
+                            </section>
+                    </li>
+                    <li id="slide-3" class="left middle "
+                        data-theme="secondary" data-title="Web accessibility?">
+                            <section>
+                                <h2 id="web-accessibility">Web accessibility</h2>
+<p>Users, barriers and why we should care</p>
+
+                            </section>
+                    </li>
+                    <li id="slide-4" class="left middle "
+                        data-theme="info" data-title="Tim Berners-Lee: The Power of the Web">
+                            <section>
+                                <figure class="blockquote">
+    <img src="images/tim-berners-lee.jpg"
+         alt="Portrait of Tim Berners-Lee, inventor of the World Wide Web"/>
+    <figcaption>
+        <blockquote>
+            <p><b>The power of the Web is in its universality.</b> Access by everyone regardless of
+                disability
+                is an essential aspect.</p>
+            <p class="author"><a href="https://www.w3.org/standards/webdesign/accessibility" target="_blank" rel="noreferrer">Tim
+                Berners-Lee</a>,
+                inventor of the World Wide Web</p>
+        </blockquote>
+    </figcaption>
+</figure>
+
+                            </section>
+                    </li>
+                    <li id="slide-5" class="left top "
+                        data-theme="tertiary" data-title="People with disabilities">
+                            <section>
+                                <h2 id="people-with-disabilities">People with disabilities</h2>
+<dl>
+    <dt>Physical disablilities</dt>
+    <dd>e.g. motor impairments</dd>
+    <dt>Sensory disabilities</dt>
+    <dd>e.g. blindness / visual impairments, defective vision, deafness, deafblindness</dd>
+    <dt>Speech impediment</dt>
+    <dd>in spoken and / or written language</dd>
+    <dt>Cognitive impairments</dt>
+    <dd>e.g. learning disabilities, lack of abstraction capability, dyslexia</dd>
+</dl>
+
+                            </section>
+                    </li>
+                    <li id="slide-6" class="left top "
+                        data-theme="tertiary" data-title="Special users">
+                            <section>
+                                <h2 id="«special»-users">«Special» users</h2>
+<ul>
+<li>mobile users (poor connection, weak technical equipment, limited functionality)</li>
+<li>unexperienced users</li>
+<li>elderly people &amp; children</li>
+<li>non-native speakers</li>
+<li>search engines / bots</li>
+<li>and many more</li>
+</ul>
+
+                            </section>
+                    </li>
+                    <li id="slide-7" class="left top "
+                        data-theme="tertiary" data-title="Jeder ist betroffen">
+                            <section>
+                                <h2 id="everyone-is-affected">Everyone is affected!</h2>
+<p><img src="images/inclusive-icons.gif" alt="Microsoft inclusion illustration"></p>
+<ul>
+<li>at least in particular situations in their life!</li>
+</ul>
+
+                            </section>
+                    </li>
+                    <li id="slide-8" class="left middle " data-title="What&#x27;s the problem?">
+                            <section>
+                                <h2 id="whats-the-problem">What&#39;s the problem?</h2>
+<p>Types of barriers</p>
+
+                            </section>
+                    </li>
+                    <li id="slide-9" class="left top "
+                        data-theme="tertiary" data-title="Types of barriers">
+                            <section>
+                                <h2 id="types-of-barriers">Types of barriers</h2>
+<dl>
+    <dt>Technical barriers</dt>
+    <dd>introduced by <strong>problematic technologies or ways of implementation</strong>, <strong>hardware &amp; software limitations</strong> (also assistive technologies) and <strong>data transmission problems</strong></dd>
+    <dt>Design barriers</dt>
+    <dd>introduced by <strong>inflexible or bad designs</strong></dd>
+    <dt>Editorial or content-related barriers</dt>
+    <dd>introduced by <strong>insufficiently prepared / structured content</strong> or <strong>bad implementation</strong></dd>
+    <dt>Organisational barriers</dt>
+    <dd>introduced by <strong>non-awareness</strong>, <strong>fear of excessive costs</strong>, <strong>wrong priorities</strong> and <strong>bad project decisions</strong></dd>
+</dl>
+
+                            </section>
+                    </li>
+                    <li id="slide-10" class="left top "
+                        data-theme="tertiary" data-title="Rules &amp; Standards">
+                            <section>
+                                <h2 id="rules--standards">Rules &amp; Standards</h2>
+<ul>
+    <li><abbr title="Web Content Accessibility Guidelines">WCAG</abbr></li>
+    <li><abbr title="User Agent Accessibility Guidelines">UUAG</abbr></li>
+    <li><abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr></li>
+    <li>Germany: <abbr title="barriefreie Informationstechik-Verordnung">BITV</abbr> (federal &amp; state level)</li>
+</ul>
+                            </section>
+                    </li>
+                    <li id="slide-11" class="left middle " data-title="Legal situation">
+                            <section>
+                                <h2 id="legal-situation">Legal situation</h2>
+<p>It&#39;s a moving target!</p>
+
+                            </section>
+                    </li>
+                    <li id="slide-12" class="left top "
+                        data-theme="tertiary" data-title="International">
+                            <section>
+                                <h2 id="international">International</h2>
+<ul>
+<li>Pioneers: USA &amp; Great Britain</li>
+<li>USA: currently about one <abbr title="Americans with Disabilities Act">ADA</abbr> lawsuit per (working) hour (<a href="https://blog.usablenet.com/midyear-ada-web-accessibility-lawsuit-report-blog" target="_blank" rel="noreferrer">source</a>)</li>
+</ul>
+                            </section>
+                    </li>
+                    <li id="slide-13" class="left top "
+                        data-theme="tertiary" data-title="Europe">
+                            <section>
+                                <h2 id="europe">Europe</h2>
+<ul>
+<li><a href="https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016L2102" target="_blank" rel="noreferrer">EU Directive 2016/2102</a>  on the accessibility of the websites and mobile applications of public sector bodies (since December 2016)</li>
+<li>Following the <abbr title="European Accessibility Act">EAA</abbr> (<a href="https://eur-lex.europa.eu/eli/dir/2019/882/oj?locale=de" target="_blank" rel="noreferrer">EU Directive 2019/882</a>), select private sector businesses may be sued as of June 28th, 2025 (adopted in spring 2019)</li>
+<li>Pioneer Austria: Web accessibility is <a href="http://www.it-recht-kanzlei.de/barriefrei-oesterreichische-online-shops.html" target="_blank" rel="noreferrer">mandatory for online shops</a> (since 2016)</li>
+</ul>
+                            </section>
+                    </li>
+                    <li id="slide-14" class="left top "
+                        data-theme="tertiary" data-title="Germany">
+                            <section>
+                                <h2 id="germany">Germany</h2>
+<ul>
+<li>Following the <abbr title="Barrierefreie Informationstechnik-Verordnung">BITV</abbr>, publicly available websites of the federal administration have to be accessible (since 2002)</li>
+<li>Since September 2018, web content of public authorities (state ministries, youth welfare offices, police departments, schools, municipal hospital, saving banks / Sparkasse, Chamber of Industry and Commerce, etc.) have to be accessible (following the <a href="https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016L2102" target="_blank" rel="noreferrer">EU Directive 2016/2102</a>; various implementation deadlines)</li>
+<li>Since May 25th, 2019, the German <abbr title="Barrierefreie Informationstechnik-Verordnung">BITV</abbr> refers to the <abbr
+                                title="Web Content Accessibility Guidelines">WCAG 2.1</abbr> in all major points</li>
+</ul>
+
+                            </section>
+                    </li>
+                    <li id="wcag" class="left top "
+                        data-theme="white" data-title="WGAC">
+                            <section>
+                                <h2 id="wcag-adoption">WCAG-Adoption</h2>
+<p><a href="https://www.3playmedia.com/2017/08/22/countries-that-have-adopted-wcag-standards-map/" target="_blank" rel="noreferrer" class="credit">Bildquelle: 3Play Media</a></p>
+
+                            </section>
+                    </li>
+                    <li id="slide-16" class="left middle " data-title="Why we should care">
+                            <section>
+                                <h2 id="why-we-should-care">Why we should care</h2>
+<p>Making a case for web accessibility</p>
+
+                            </section>
+                    </li>
+                    <li id="slide-17" class="left top "
+                        data-theme="tertiary" data-title="Because …">
+                            <section>
+                                <h2 id="because-">Because …</h2>
+<ul>
+<li>we want to reach as many people as possible with our websites, right?</li>
+<li>it&#39;s an increasingly important, legal requirement</li>
+<li>we will all be affected ourselves at some point</li>
+<li>it&#39;s the ethically right thing to do</li>
+</ul>
+
+                            </section>
+                    </li>
+                    <li id="slide-18" class="left middle "
+                        data-theme="secondary" data-title="Building Blocks">
+                            <section>
+                                <h2 id="building-blocks">Building Blocks</h2>
+<p>for web developers</p>
+
+                            </section>
+                    </li>
+                    <li id="slide-19" class="left top " data-title="Main Ingredients">
+                            <section>
+                                <h2 id="main-ingredients">Main Ingredients</h2>
+<dl>
+    <dt>Semantics &amp; Structure</dt>
+    <dd>HTML5 + WAI-<abbr title="Accessible Rich Internet Applications">ARIA</abbr></dd>
+    <dt>Design</dt>
+    <dd>CSS</dd>
+    <dt>Interaction</dt>
+    <dd>JavaScript</dd>
+    <dt>Content</dt>
+    <dd>Alternative media versions, easy to read language, etc.</dd>
+</dl>
+                            </section>
+                    </li>
+                    <li id="slide-20" class="left top "
+                        data-theme="tertiary" data-title="WAI-ARIA">
+                            <section>
+                                <h2 id="wai-aria">WAI-ARIA</h2>
+<ul>
+<li><a href="https://www.w3.org/WAI/standards-guidelines/aria/">Accessible Rich Internet Applications</a>: Supplementary vocabulary for HTML</li>
+<li><strong>Roles</strong>: advanced semantic structures that aren&#39;t provided by native HTML, e.g. carousels, tree views, dialogs (<code>role=&quot;main&quot;</code>, <code>role=&quot;navigation&quot;</code>, <code>role=&quot;dialog&quot;</code>)</li>
+<li><strong>States &amp; Properties</strong> via <code>aria</code> attributes: additional conditions that can&#39;t be expressed with HTML, e.g. relations between elements (toggle + menu), opening states, accessible names</li>
+<li><strong>Live Regions</strong>: for communicating dynamic changes to assistive technolgies, e.g. error validation, dialog messages, lazyloaded data</li>
+<li><strong>Don&#39;t use ARIA!</strong></li>
+</ul>
+
+                            </section>
+                    </li>
+                    <li id="slide-21" class="left top "
+                        data-theme="mint" data-title="Disclaimer">
+                            <section>
+                                <h2 id="disclaimer">Disclaimer</h2>
+<figure class="side-by-side">
+<figcaption>
+
+<p><blink>We just scratch the tip of the iceberg here!</blink></p>
+</figcaption>
+
+<p><img src="images/attention.png" alt="Warning"></p>
+</figure>
+                            </section>
+                    </li>
+                    <li id="slide-22" class="left top html"
+                        data-theme="tertiary" data-title="1. Valid, semantic markup">
+                            <section>
+                                <h2 id="1-valid-semantic-markup">1. Valid, semantic markup</h2>
+<ul>
+<li>Proper use of HTML as a declarative language!</li>
+<li>99% of all HTML tags have a <strong>meaning</strong> (exceptions <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code> …)</li>
+<li>Paragraphs with <code>&lt;p&gt;</code> instead of <code>&lt;div&gt;</code> + <code>&lt;br&gt;</code></li>
+<li>Lists with <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> and <code>&lt;dl&gt;</code></li>
+<li>Data tables with proper vertical / horizontal <code>&lt;th&gt;</code> headers, etc.</li>
+<li>…</li>
+</ul>
+
+                            </section>
+                    </li>
+                    <li id="slide-23" class="left top html aria"
+                        data-theme="tertiary" data-title="2. Landmarks">
+                            <section>
+                                <h2 id="2-landmarks">2. Landmarks</h2>
+<ul>
+<li><a href="https://html.spec.whatwg.org/multipage/sections.html">HTML Sectioning Elements</a> create landmarks by default: <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code></li>
+<li>Correspond to <a href="https://www.w3.org/TR/wai-aria-practices/examples/landmarks/">ARIA Landmarks</a></li>
+<li>Important navigational aid for assitive technology (<a href="https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks">WCAG SC 2.4.1 Bypass Blocks</a>)</li>
+<li><strong>Landmarks</strong> <a href="https://chrome.google.com/webstore/detail/landmark-navigation-via-k/ddpokpbjopmeeiiolheejjpkonlkklgp">Chrome Extension</a></li>
+</ul>
+
+                            </section>
+                    </li>
+                    <li id="slide-24" class="left top html"
+                        data-theme="tertiary" data-title="3. Headings">
+                            <section>
+                                <h2 id="3-headings">3. Headings</h2>
+<ul>
+<li>Correct heading hierarchy is essential</li>
+<li>Important navigational aid for assitive technology (<a href="https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks">WCAG SC 2.4.1 Bypass Blocks</a>)</li>
+<li><strong>«Only one <code>&lt;h1&gt;</code>!»</strong> is an urban legend, but mostly reasonable</li>
+<li>Heading structure doesn&#39;t necessarily have to start with an <code>&lt;h1&gt;</code></li>
+<li><strong>HeadingsMap</strong> Extension for <a href="https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi">Chrome</a> and <a href="https://addons.mozilla.org/de/firefox/addon/headingsmap/">Firefox</a></li>
+</ul>
+
+                            </section>
+                    </li>
+                    <li id="martin-splitt" class="left top "
+                        data-theme="white" data-title="What Martin said …">
+                            <section>
+                                <h2 id="what-martin-said-">What Martin said …</h2>
+
+                            </section>
+                    </li>
+                    <li id="slide-25" class="left top html"
+                        data-theme="tertiary" data-title="4. Links &amp; Buttons">
+                            <section>
+                                <h2 id="4-links--buttons">4. Links &amp; Buttons</h2>
+<ul>
+<li>Links <code>&lt;a&gt;</code> <strong>lead to a (remote) resource</strong></li>
+<li>Buttons <code>&lt;button&gt;</code> <strong>trigger an action</strong> (within the current resource)</li>
+<li><strong>NEVER</strong> use <code>&lt;div class=&quot;button&quot; onclick=&quot;…&quot;&gt;</code> — it&#39;s non-semantic, expensive and error-prone!</li>
+<li>There are complex cases: e.g. menu items, that are both submenu toggles and real links at the same time</li>
+</ul>
+
+                            </section>
+                    </li>
+                    <li id="slide-27" class="left top html aria css javascript"
+                        data-theme="tertiary" data-title="5. Forms">
+                            <section>
+                                <h2 id="5-forms">5. Forms</h2>
+<figure class="side-by-side">
+<figcaption>
+
+<ul>
+<li>Use HTML5 <code>&lt;input type=&quot;…&quot;&gt;</code></li>
+<li>Form elements <strong>always</strong> need a meaningful <code>&lt;label&gt;</code> — ideally preceding / visually above the field, using <code>for=&quot;IDREF&quot;</code></li>
+<li><code>placeholder=&quot;…&quot;</code> or <code>title=&quot;…&quot;</code> are no label replacements!</li>
+<li>Visual field presentation should support the purpose</li>
+<li><a href="https://www.smashingmagazine.com/printed-books/form-design-patterns/">Form Design Patterns</a> by <a href="https://adamsilver.io/">Adam Silver</a></li>
+</ul>
+</figcaption>
+
+<p><img src="images/form-design-patterns.jpg" alt="Adam Silver: Form Design Patterns"></p>
+</figure>
+
+                            </section>
+                    </li>
+                    <li id="slide-28" class="left top html css"
+                        data-theme="tertiary" data-title="6.a Visually hide content">
+                            <section>
+                                <h2 id="6a-visually-hide-content">6.a Visually hide content</h2>
+<figure class="side-by-side">
+<figcaption>
+
+<ul>
+<li>Hide for all users: <code>hidden</code> attribute / <code>display: none</code></li>
+<li>Hide from display, but keep for assistive technology («<strong>visually hidden</strong>»)</li>
+<li>Example: <code>&lt;span class=&quot;hide-element&quot;&gt;Toggle &lt;/span&gt;Menu</code></li>
+</ul>
+</figcaption>
+
+<pre><code>.hide-content {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-indent: 300% !important;
+}
+
+.hide-element {
+    position: absolute !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    width: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    border: 0 !important;
+}</code></pre></figure>
+
+                            </section>
+                    </li>
+                    <li id="slide-29" class="left top html aria css"
+                        data-theme="tertiary" data-title="6.b Hide for assistive technology">
+                            <section>
+                                <h2 id="6b-hide-for-at">6.b Hide for AT</h2>
+<ul>
+<li>Hide for all users: <code>hidden</code> attribute / <code>display: none</code></li>
+<li>Hide for assistive technology only: <code>aria-hidden=&quot;true&quot;</code></li>
+<li>Remove semantics: <code>role=&quot;presentation&quot;</code></li>
+</ul>
+
+                            </section>
+                    </li>
+                    <li id="slide-30" class="left top html css javascript"
+                        data-theme="tertiary" data-title="7. Keyboard operability">
+                            <section>
+                                <h2 id="7-keyboard-operability">7. Keyboard operability</h2>
+<ul>
+<li>Ensure consistent <strong>keyboard operability</strong> → test it!</li>
+<li>Don&#39;t fiddle with <code>tabindex</code>!</li>
+<li>Don&#39;t risk <strong>keyboard traps</strong></li>
+<li>Don&#39;t rely on hover (or any other particular input device)</li>
+<li>Use <code>:focus-within</code> or (more expensive) JavaScript solutions</li>
+</ul>
+
+                            </section>
+                    </li>
+                    <li id="slide-31" class="left top html css"
+                        data-theme="tertiary" data-title="8. Focus order &amp; visibility">
+                            <section>
+                                <h2 id="8-focus-order--visibility">8. Focus order &amp; visibility</h2>
+<ul>
+<li>Keyboard focus must always be clearly visible</li>
+<li><strong>NEVER</strong> use <code>outline: none</code> without alternative (<a href="https://www.w3.org/TR/WCAG21/#focus-visible">WCAG SC 2.4.7</a>)</li>
+<li>Hidden content must not be focusable (e.g. accordion, carousel)</li>
+<li>Traceable document &amp; focus order</li>
+<li>Attention: Flexbox &amp; CSS Grid</li>
+<li>AT use linearized document form → no skimming / scanning, no visual orientation</li>
+<li>Attention: Not all screen reader users are blind!</li>
+</ul>
+
+                            </section>
+                    </li>
+                    <li id="slide-32" class="left top html css aria"
+                        data-theme="tertiary" data-title="9. Distinct states">
+                            <section>
+                                <h2 id="9-distinct-states">9. Distinct States</h2>
+<ul>
+<li>Buttons &amp; Links (Standard, <code>:hover</code>, <code>:focus</code>, <code>:active</code>, <code>:visited</code>)</li>
+<li>Inactive elements (e.g. <code>&lt;button disabled&gt;</code>)</li>
+<li>Mandatory form fields &amp; error hints: z.B. <code>required</code>, <code>aria-valid</code></li>
+<li>Expanded / collapsed elements and menus: <code>aria-haspopup</code>,<br/><code>aria-expanded</code> (e.g. hamburger menu)</li>
+<li>Active regions &amp; pages (tab navigation, <code>aria-page=&quot;current&quot;</code>)</li>
+</ul>
+
+                            </section>
+                    </li>
+                    <li id="slide-33" class="left top html aria content"
+                        data-theme="tertiary" data-title="10. Text alternatives for non-text content">
+                            <section>
+                                <h2 id="10-text-alternatives-for-non-text-content">10. Text alternatives for non-text content</h2>
+<ul>
+<li>Every element has an <strong>accessible name</strong> which is computed <a href="https://www.w3.org/TR/accname-1.1/">following a complex algorithm</a> implying text content, <code>src</code>, <code>href</code>, <code>title</code>, <code>placeholder</code>, <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-describedby</code> attributes</li>
+<li>Text alternatives for images and graphical UI components: <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">An alt Decision Tree</a></li>
+<li>Rule of thumb: Short, concise, essential info only</li>
+<li>Avoid verbiage (e.g. «Photo of …»)</li>
+</ul>
+
+                            </section>
+                    </li>
+                    <li id="slide-34" class="left top " data-title="JavaScript">
+                            <section>
+                                <h2 id="javascript">JavaScript</h2>
+<ul>
+<li>JS frameworks like React, Angular, Vue aren&#39;t inaccessible per se; however, they make it very easy to ignore even the most fundamental a11y basics …</li>
+<li><a href="https://inclusive-components.design">Inclusive Components</a> (Heydon Pickering)</li>
+<li><a href="https://accessible-app.com">Patterns &amp; Strategies for accessible web-apps</a> (Marcus Herrmann)</li>
+<li><a href="https://www.upyoura11y.com">A web accessibility toolkit with a React focus</a> (Suzanne Aitchison)</li>
+<li>Marcy Sutton&#39;s <a href="https://egghead.io">egghead.io</a> and <a href="https://frontendmasters.com">Frontend Masters</a> courses ($)</li>
+<li><a href="https://marcus-herrmann.com/blog/barrierefrei-navigieren-in-web-apps">Barrierefrei navigieren in Web-Apps</a> (Marcus Herrmann)</li>
+</ul>
+
+                            </section>
+                    </li>
+                    <li id="slide-35" class="left top " data-title="Links">
+                            <section>
+                                <h2 id="links">Links</h2>
+<ul>
+<li><a href="https://inclusivedesignprinciples.org/">Inclusive Design Principles</a></li>
+<li><a href="https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/">Overview of automated testing tools</a> (Browser, command line, Node.js)</li>
+<li><a href="https://bitvtest.de">BIK BITV-/WCAG-Test</a> including self-assessment</li>
+</ul>
+
+                            </section>
+                    </li>
+                    <li id="slide-36" class="left top " data-title="Accessibility …">
+                            <section>
+                                <h2 id="accessibility-">Accessibility …</h2>
+<ul>
+<li>is neither hard nor ugly nor limited in functionality</li>
+<li>starts with a «mind shift»: Accessibility First!</li>
+<li>mostly comes by default and «just» requires us not to ruin it</li>
+<li>but most importantly …</li>
+</ul>
+
+                            </section>
+                    </li>
+                    <li id="job" class="left middle "
+                        data-theme="secondary" data-title="Unser Job">
+                            <section>
+                                <blockquote class="twitter-tweet" data-lang="de"><p lang="en" dir="ltr">The biggest misconception
+    about accessibility is that by adding it you&#39;re doing somebody a favor. You&#39;re not, you&#39;re
+    doing your job. <a href="https://twitter.com/hashtag/a11y?src=hash">#a11y</a></p>&mdash; james
+    williamson (@jameswillweb) <a href="https://twitter.com/jameswillweb/status/789212365325828096">20. Oktober
+        2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            </section>
+                    </li>
+                    <li id="slide-38" class="left middle "
+                        data-theme="info" data-title="Thank you">
+                            <section>
+                                <h1 id="thank-you">Thank you!</h1>
+<dl class="static"> 
+    <dt>November 16th-17th, 2019, Berlin</dt>
+    <dd>Accessibility Club Summit 2019<br>Barcamp + Workshops — <a href="https://a11y.club/event/accessibility-club-summit-2019" target="_blank" rel="noopener">https://a11y.club</a></dd>
+</dl>
+
+
+                                    <footer><div class="p-author h-card">
+<a href="https://jkphl.is" target="_blank" rel="me"><span class="p-given-name">Joschi</span> <span class="p-family-name">Kuphal</span></a> · <a href="https://twitter.com/jkphl" rel="me" target="_blank">@jkphl</a>
+</div>
+<div>
+Slides: <a href="https://jkphl.is/slides/frankenjs/a11y" target="_top" rel="noopener">https://jkphl.is/slides/frankenjs/a11y</a>
+</div></footer>
+                            </section>
+                    </li>
+            </ol>
+        <script>(function(global,d){"use strict";global.SlideshowAction={};var CYCLE=true;var slides=d.querySelectorAll(".slides > li");var current=0;var currentStep=0;var currentSteps=[];var minIndex=0;var maxIndex=slides.length-1;var interactive=false;var miniatures=false;var body;var listTypes=["ul","ol","dl"];function hasListAncestor(el,root){while(el.parentNode&&el.parentNode!==root){if(listTypes.indexOf(el.parentNode.tagName.toLowerCase())>=0){return true}el=el.parentNode}return false}function prepareInteractive(interactive,offset){var isDefinitionList=interactive.tagName.toLowerCase()==="dl";var interactives=0;for(var c=0,child;c<interactive.childNodes.length;++c){child=interactive.childNodes[c];if(child.nodeName.toLowerCase()===(isDefinitionList?"dt":"li")&&!child.classList.contains("static")){var interactiveClass="interactive-"+(offset+interactives++);child.classList.add("interactive");child.classList.add(interactiveClass);if(isDefinitionList){while(child.nextSibling){if(child.nextSibling.nodeType===1){if(child.nextSibling.tagName.toLowerCase()!=="dd"){break}child.nextSibling.classList.add("interactive");child.nextSibling.classList.add(interactiveClass)}child=child.nextSibling}}}}return interactives}for(var s=0;s<slides.length;++s){slides[s].style.zIndex=maxIndex-s;slides[s].setAttribute("data-slide-index",s);if(s>0){slides[s].style.display="none";slides[s].setAttribute("aria-hidden","true")}var interactives=0;var lists=slides[s].querySelectorAll("ul, dl");for(var l=0;l<lists.length;++l){if(lists[l].classList.contains("static")||hasListAncestor(lists[l],slides[s])){continue}interactives+=prepareInteractive(lists[l],interactives)}if(interactives){slides[s].classList.add("has-interactives");slides[s].setAttribute("data-interactives",interactives)}}function call(commands,prev,next,callback){(function run(){if(commands.length===0){return callback(prev,next)}var cmd=commands.shift();if(cmd.length&&cmd in global.SlideshowAction){var action=global.SlideshowAction[cmd];if(action&&{}.toString.call(action)==="[object Function]"){action(prev,next)}}return run()})()}function leave(prev,next,callback){if(!prev){if(callback){callback()}return}prev.classList.remove("active");prev.setAttribute("aria-hidden","true");step(prev,0);var commands=prev.getAttribute("data-onleave");commands=commands?commands.split(" "):[];call(commands.filter(function(cmd){return cmd.length>0}),prev,next,callback)}function enter(prev,next,callback){var list=0;if(!next){if(callback){callback()}return}var steps=next.getAttribute("data-steps");if(steps&&steps.length){currentSteps=steps.split(" ")}else if(interactive&&(list=parseInt(next.getAttribute("data-interactives")||"0",10))){currentSteps=[];for(var s=0;s<=list;++s){currentSteps.push("step-"+s)}}else{currentSteps=[""]}step(next,0);var commands=next.getAttribute("data-onenter");commands=commands?commands.split(" "):[];call(commands.filter(function(cmd){return cmd.length>0}),prev,next,shuffle);setTimeout(function(){next.classList.add("active");next.removeAttribute("aria-hidden")},10)}function shuffle(prev,next){for(var s=0;s<slides.length;++s){slides[s].style.zIndex=minIndex}if(prev){prev.style.zIndex=maxIndex-1}next.style.zIndex=maxIndex;next.style.display=""}function transition(prevIndex,nextIndex){global.location.hash="#"+current;leave(prevIndex===-1?null:slides[prevIndex],slides[nextIndex],enter)}function prev(index,cycle){if(currentStep>0){step(slides[index],currentStep-1);return index}var newIndex=index-1;return newIndex>=minIndex?newIndex:cycle?maxIndex:minIndex}function next(index,cycle){if(currentStep<currentSteps.length-1){step(slides[index],currentStep+1);return index}var newIndex=index+1;newIndex=newIndex<=maxIndex?newIndex:cycle?minIndex:maxIndex;return newIndex}function step(slide,step){if(currentSteps[currentStep]){slide.classList.remove(currentSteps[currentStep])}currentStep=step;if(currentSteps[currentStep]){slide.classList.add(currentSteps[currentStep])}}function toggleMouse(){var cursor=body.style.cursor;body.style.cursor=cursor==="none"?"crosshair":"none"}function toggleInteractive(){interactive=!interactive;d.documentElement.classList[interactive?"add":"remove"]("is-interactive");if(currentSteps.length&&currentSteps[0].length){slides[current].classList.remove(currentSteps[currentStep])}currentStep=0;currentSteps=[""];transition(current,current)}function toggleMiniatures(){var s;if(miniatures){for(s=0;s<slides.length;++s){slides[s].onclick=null}document.documentElement.classList.remove("miniatures");if(interactive){document.documentElement.classList.add("is-interactive")}}else{for(s=0;s<slides.length;++s){slides[s].onclick=function(n){return function(){toggleMiniatures();transition(current,n)}}(s)}document.documentElement.classList.remove("is-interactive");document.documentElement.classList.add("miniatures")}miniatures=!miniatures}function keyDown(e){var old=current;switch(e.keyCode){case 33:case 37:case 38:current=prev(old,CYCLE);break;case 32:case 34:case 39:case 40:case 13:current=next(old,CYCLE);break;case 27:toggleMiniatures();return;case 67:toggleMouse();return;case 73:toggleInteractive();return;default:return}if(current!==old){transition(old,current)}}if(window.location.hash){current=parseInt(location.hash.substr(1)||0,10)||current}var touches={touchstart:{x:-1,y:-1},touchmove:{x:-1,y:-1},touchend:false};var touchHandler=function(e){var touch;if(typeof e!=="undefined"){e.preventDefault();if(typeof e.touches!=="undefined"){touch=e.touches[0];switch(e.type){case"touchstart":case"touchmove":touches[e.type].x=touch.pageX;touches[e.type].y=touch.pageY;break;case"touchend":touches[e.type]=true;if(touches.touchstart.x>-1&&touches.touchmove.x>-1){var old=current;current=touches.touchstart.x<touches.touchmove.x?prev(old,CYCLE):next(old,CYCLE);if(current!==old){transition(old,current)}}}}}};d.addEventListener("touchstart",touchHandler,false);d.addEventListener("touchmove",touchHandler,false);d.addEventListener("touchend",touchHandler,false);d.addEventListener("keydown",keyDown,false);d.addEventListener("DOMContentLoaded",function(){body=document.querySelector("body");body.style.cursor="none";transition(0,current)})})(window,document);var labelsStrings={html:"HTML",aria:"WAI-ARIA",css:"CSS",javascript:"JavaScript",content:"Inhalt"};var labelSlides=document.querySelectorAll("li.html, li.aria, li.css, li.javascript, li.content");for(var s=0;s<labelSlides.length;++s){var labels=document.createElement("ul");labels.classList.add("labels");for(var l in labelsStrings){if(labelSlides[s].classList.contains(l)){var label=document.createElement("li");label.classList.add(l);label.textContent=labelsStrings[l];labels.appendChild(label)}}labelSlides[s].insertBefore(labels,labelSlides[s].firstChild)}</script>
+    </body>
+</html>
