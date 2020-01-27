@@ -1,9 +1,9 @@
 ---
-title: "23. Verständlichkeit"
+title: "Verständlichkeit"
 css: content
 theme: tertiary
 ---
-## 23. Verständlichkeit
+## Verständlichkeit
 
 - zielgruppengerechtes Sprachniveau
 - so **einfach wie möglich** und nur so **komplex wie nötig** formulieren

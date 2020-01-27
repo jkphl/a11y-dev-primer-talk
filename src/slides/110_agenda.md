@@ -16,7 +16,7 @@ theme: info
     <dd>
         <ul>
             <li>Anforderungen gem. BITV 2.0</li>
-            <li>Herangehensweise &amp; grundlegende Techniken</li>
+            <li>Organisation, Design, Technik &amp; Inhalt (ein kleiner Auszug)</li>
         </ul>
     </dd>
 </dl>

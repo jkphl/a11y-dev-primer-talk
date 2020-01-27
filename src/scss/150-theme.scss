@@ -335,6 +335,13 @@ footer {
     background-repeat: no-repeat;
 }
 
+#costs {
+    background-image: url(images/comparing-techniques.jpg);
+    background-size: auto 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 #job twitter-widget {
     transform: rotate(0deg) scale(2) translateX(50%) !important;
 }
@@ -378,6 +385,13 @@ pre {
 
 .demo {
     background-color: rgba(255, 255, 255, .8);
+}
+
+#demo {
+    background-image: url(images/tim-berners-lee-line-mode.jpg);
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
 }
 
 #exclusive {
@@ -426,28 +440,23 @@ pre {
     content: '';
 }
 
-.slides > li > ul li.html {
-    background-color: $html;
-    color: white;
-}
-
-.slides > li > ul li.aria {
-    background-color: $aria;
-    color: white;
-}
-
-.slides > li > ul li.css {
+.slides > li > ul li.technical {
     background-color: $css;
     color: white;
 }
 
-.slides > li > ul li.javascript {
+.slides > li > ul li.design {
     background-color: $javascript;
     color: black;
 }
 
+.slides > li > ul li.organization {
+    background-color: $aria;
+    color: white;
+}
+
 .slides > li > ul li.content {
-    background-color: $content;
+    background-color: $html;
     color: white;
 }
 

@@ -1,10 +1,10 @@
 ---
-title: "7. Etablierte UX-Patterns"
-css: css
+title: "Etablierte UX-Patterns"
+css: design
 theme: tertiary
 ---
-## 7. Etablierte UX-Patterns
+## Etablierte UX-Patterns
 
 - bewährte Design-Muster nutzen (**kognitive Last** reduzieren)
-- exotische Experimente vermeiden
+- exotische Experimente vermeiden und nicht »in Schönheit sterben«
 - Orientierung geben: Wo befinde ich mich, was ist aktiv?

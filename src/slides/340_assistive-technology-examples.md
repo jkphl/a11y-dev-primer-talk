@@ -7,8 +7,8 @@ theme: tertiary
     <dt>Sinnesbehinderungen</dt>
     <dd>
         <ul>
-            <li>Screenreader (Akkustische Ausgabe + Braille-Anzeige), Bildschirmlupe</li>
-            <li>Textversionen von Video-, Audio- und Multimediainhalten, Gebärdensprachvideos</li>
+            <li>Screenreader (akkustische Ausgabe + Braille-Anzeige)</li>
+            <li>Bildschirmlupe</li>
         </ul>
     </dd>
     <dt>Körperliche Behinderungen</dt>
@@ -20,7 +20,8 @@ theme: tertiary
     <dt>Kognitive Behinderungen</dt>
     <dd>
         <ul>
-            <li>Leichte / Einfache Sprache, Illustrationen &amp; Schaubilder</li>
+            <li>Leichte / Einfache Sprache</li>
+            <li>Illustrationen &amp; Schaubilder</li>
         <ul>
     </dd>
 </dl>

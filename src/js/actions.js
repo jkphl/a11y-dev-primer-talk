@@ -9,13 +9,12 @@
 // }
 
 var labelsStrings = {
-    html: 'HTML',
-    aria: 'WAI-ARIA',
-    css: 'CSS',
-    javascript: 'JavaScript',
-    content: 'Inhalt'
+    technical: 'Technik',
+    design: 'Design',
+    content: 'Inhalt',
+    organization: 'Organisation'
 };
-var labelSlides = document.querySelectorAll('li.html, li.aria, li.css, li.javascript, li.content');
+var labelSlides = document.querySelectorAll('li.technical, li.design, li.organization, li.content');
 for (var s = 0; s < labelSlides.length; ++s) {
     var labels = document.createElement('ul');
     labels.classList.add('labels');

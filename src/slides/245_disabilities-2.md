@@ -10,5 +10,5 @@ theme: tertiary
     <dt>Temporäre Behinderung</dt>
     <dd>Verletzung, Krankheit oder kurzzeitige Behinderung</dd>
     <dt>Situative Behinderung</dt>
-    <dd>Umgebungen oder Situationen, die Personen einschränken</dd>
+    <dd>Umgebungen oder Situationen, die einschränken</dd>
 </dl>
