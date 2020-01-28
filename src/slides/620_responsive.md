@@ -7,4 +7,4 @@ theme: tertiary
 
 - **ein** flexibles Design für alle Ausgabegrößen (Smartphones, Tablets, Desktop)
 - wichtig für unterschiedliche Nutzungsszenarien, aber auch bei Bildschirmvergrößerung
-- Pluspunkt: Rankingfaktor bei Suchmaschinen
+- Pluspunkt: Rankingfaktor für Suchmaschinen

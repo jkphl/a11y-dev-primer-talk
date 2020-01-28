@@ -463,3 +463,7 @@ pre {
 ul.informal li::before {
     display: none;
 }
+
+.captcha {
+    background-color: $white;
+}

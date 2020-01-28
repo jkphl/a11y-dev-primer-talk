@@ -5,6 +5,6 @@ theme: tertiary
 ---
 ## Aussagekräftige Beschriftungen
 
-- Link- und Überschriftenlisten als Navigationshilfsmittel für assistive Technologien
+- Link- und Überschriftenlisten sind wichtiges Navigationshilfsmittel für assistive Technologien
 - Links und Überschriften so formulieren, dass sie auch **außerhalb ihres Kontexts** funktionieren
 - Negativbeispiele »**mehr**«, »**weiterlesen**«

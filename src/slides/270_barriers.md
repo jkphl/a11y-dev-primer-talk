@@ -3,4 +3,4 @@ title: "Barrieren"
 valign: middle
 ---
 ## Barrieren
-Was sind Hindernisse?
+Was sind Hindernisse und wer ist zuständig?

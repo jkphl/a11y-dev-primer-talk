@@ -5,7 +5,7 @@ valign: middle
 ---
 # Danke!
 
-<dl class="static"> 
+<dl class="static">
     <dt>29. April 2020, Düsseldorf</dt>
     <dd>Accessibility Club Meetup #9 — <a href="https://accessibility-club.org/event/accessibility-club-meetup-9-7" target="_blank" rel="noopener">https://a11y.club</a></dd>
     <dt>13.-14. Juni 2020, Amsterdam</dt>
@@ -17,5 +17,5 @@ valign: middle
 <a href="https://jkphl.is" target="_blank" rel="me"><span class="p-given-name">Joschi</span> <span class="p-family-name">Kuphal</span></a> · <a href="https://twitter.com/jkphl" rel="me" target="_blank">@jkphl</a>
 </div>
 <div>
-Vortragsfolien: <a href="https://jkphl.is/slides/diakonie/a11y" target="_top" rel="noopener">https://jkphl.is/slides/diakonie/a11y</a>
+Vortragsfolien: <a href="https://jkphl.is/slides/diakonie/a11y" target="_top" rel="noopener">https://jk.is/diakonie</a>
 </div>
