@@ -1,13 +1,11 @@
-# Barrierefreiheit im Web
+# Barrierefreiheit bei digitalen Produkten
 
-### Grundlagen für Designer, Entwickler & Redakteure
-
-> Workshop bei capito Nordbayern am 16.9.2019<br/>
+> Vortrag auf dem Zertifikatslehrgang "Inklusive Kultureinrichtungen – das Museum", 10. Juli 2020<br/>
 > Vortragsfolien (Deutsch)
 
 ___
 
-Die Vortragsfolien sind online verfügbar unter [https://jkphl.is/slides/capito/2019](https://jkphl.is/slides/capito/2019).
+Die Vortragsfolien sind online verfügbar unter [https://jkphl.is/slides/museen/a11y](https://jkphl.is/slides/museen/a11y).
 
 
 #### Tastaturkürzel
