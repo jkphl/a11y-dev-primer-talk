@@ -1,19 +1,19 @@
-# Barrierefreiheit im Web
+# Accessibility primer for web developers
 
-### Grundlagen für Designer, Entwickler & Redakteure
+### The What, the Why and the How
 
-> Workshop bei capito Nordbayern am 16.9.2019<br/>
-> Vortragsfolien (Deutsch)
+> FrankenJS Meetup, October 23r, 2019<br/>
+> Slides (English)
 
 ___
 
-Die Vortragsfolien sind online verfügbar unter [https://jkphl.is/slides/capito/2019](https://jkphl.is/slides/capito/2019).
+The slides are also available at [https://jkphl.is/slides/frankenjs/a11y](https://jkphl.is/slides/frankenjs/a11y).
 
 
 #### Tastaturkürzel
 
-* `Bild Oben`, `←`, `↑`: Vorherige Folie
-* `Leerzeichen`, `Zeilenumbruch`, `Bild Oben`, `→`, `↓`: Nächste Folie
-* `c`: Mauszeiger ein- / ausblenden
-* `i`: Interaktiven Modus aktivieren / deaktivieren (schrittweises Einblenden von Listenelementen)
-* `Esc`: Folienübersicht
+* `Page Up`, `←`, `↑`: Previous slide
+* `Space`, `Return`, `Page Down`, `→`, `↓`: Next slide
+* `c`: Toggle mouse cursor
+* `i`: Toggle interactive mode (stepwise display of list items)
+* `Esc`: Slide overview
