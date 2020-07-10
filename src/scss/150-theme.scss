@@ -128,6 +128,10 @@ twitterwidget {
     background-color: $info !important;
 }
 
+[data-theme=a11yance] {
+    background-color: $a11yance !important;
+}
+
 [data-theme=white] {
     background-color: $white !important;
 }
@@ -466,4 +470,53 @@ ul.informal li::before {
 
 .captcha {
     background-color: $white;
+}
+
+#logos {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    & a {
+        text-decoration: none;
+
+        &:hover, &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    & li {
+        text-align:  center;
+        margin: 8vh 0;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    & figcaption {
+        margin-top: 2rem;
+        color: $highlight;
+    }
+
+    @media (min-aspect-ratio: 2/3) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        & li {
+            text-align: left;
+            flex-basis: 50%;
+            margin: 0;
+        }
+
+        & figure {
+            display: inline-block;
+            width: 30vw;
+        }
+
+        & figcaption {
+            text-align: center;
+        }
+    }
 }
