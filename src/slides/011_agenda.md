@@ -19,4 +19,10 @@ theme: info
             <li>Organisation, Design, Technik &amp; Inhalt (ein kleiner Auszug)</li>
         </ul>
     </dd>
+    <dt>3. Barrierefreiheit im SFZ</dt>
+    <dd>
+        <ul>
+            <li>Prüfung &amp; Umsetzung → Speed-BarCamp</li>
+        </ul>
+    </dd>
 </dl>

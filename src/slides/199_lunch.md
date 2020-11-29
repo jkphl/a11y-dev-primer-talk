@@ -1,9 +1,9 @@
 ---
-title: "Danke"
+title: "Pause"
 theme: a11yance
 valign: middle
 ---
-# Danke!
+# Pause
 
 <ul id="logos" class="static">
 <li>

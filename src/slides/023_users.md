@@ -2,6 +2,6 @@
 title: "Nutzer*innen"
 valign: middle
 ---
-## Nutzer*innen
+## Nutzende
 
 Um wen geht es eigentlich?

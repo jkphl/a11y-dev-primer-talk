@@ -1,5 +1,5 @@
 ---
-title: "Web accessibility?"
+title: "Barrierefreiheit umsetzen"
 valign: middle
 theme: secondary
 ---

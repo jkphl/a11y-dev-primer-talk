@@ -6,7 +6,7 @@ theme: tertiary
 ## Sensibilisierung
 
 - Bewusstmachung auf der Entscheider*innenebene
-- Aufklärung: Barrierefreie digitale Angebote sind **NICHT**:
+- Aufklärung: Barrierefreie digitale Angebote sind **NICHT**
     - häßlich (im Design eingeschränkt)
     - primitiv (in der Funktion eingeschränkt)
     - unbezahlbar
