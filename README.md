@@ -1,6 +1,6 @@
 # Barrierefreiheit bei digitalen Produkten
 
-> Vortrag auf dem Zertifikatslehrgang "Inklusive Kultureinrichtungen – das Museum", 10. Juli 2020<br/>
+> Vortrag auf dem Zertifikatslehrgang "Inklusive Kultureinrichtungen – das Museum", 14. Juli 2021<br/>
 > Vortragsfolien (Deutsch)
 
 ___
