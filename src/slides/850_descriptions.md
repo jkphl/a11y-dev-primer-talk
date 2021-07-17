@@ -7,4 +7,4 @@ theme: tertiary
 
 - Link- und Überschriftenlisten sind wichtiges Navigationshilfsmittel für assistive Technologien
 - Links und Überschriften so formulieren, dass sie auch **außerhalb ihres Kontexts** funktionieren
-- Negativbeispiele »**mehr**«, »**weiterlesen**«
+- Negativbeispiele „**mehr**“, „**weiterlesen**“

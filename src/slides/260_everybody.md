@@ -1,8 +1,8 @@
 ---
-title: "Jeder ist betroffen"
+title: "Alle sind betroffen"
 theme: tertiary
 ---
-## Jeder ist betroffen!
+## Alle sind betroffen!
 
 ![Microsoft inclusion illustration](images/inclusive-icons.gif)
 

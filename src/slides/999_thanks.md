@@ -29,5 +29,5 @@ valign: middle
 <a href="https://jkphl.is" target="_blank" rel="me"><span class="p-given-name">Joschi</span> <span class="p-family-name">Kuphal</span></a> · <a href="https://twitter.com/jkphl" rel="me" target="_blank">@jkphl</a>
 </div>
 <div>
-Vortragsfolien: <a href="https://jkphl.is/slides/museen/a11y" target="_top" rel="noopener">https://jk.is/museen</a>
+Vortragsfolien: <a href="https://jkphl.is/slides/mpz/a11y" target="_top" rel="noopener">https://jk.is/mpz</a>
 </div>

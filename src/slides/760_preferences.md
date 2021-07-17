@@ -9,5 +9,5 @@ theme: tertiary
 - Seitenzoom nicht verhindern, Bildschirmorientierung nicht erzwingen
 - präferierte Schriftarten & -größe (Textzoom)
 - reduzierte Animationen
-- »Dark Mode« (individuelles Farbschema)
+- „Dark Mode“ (individuelles Farbschema)
 - …

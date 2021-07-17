@@ -5,7 +5,7 @@ theme: tertiary
 ---
 ## Budgetierung
 
-- 90% aller Maßnahmen sind einfach nur »gutes Handwerk« und kein tatsächlicher Mehraufwand während der Umsetzung
+- 90% aller Maßnahmen sind einfach nur „gutes Handwerk“ und kein tatsächlicher Mehraufwand während der Umsetzung
 - Ausnahmen, z.B. **Aufbereitung von Medienalternativen**
     - Captions & Audiodeskriptionen für Videos
     - Transskripte für Video & Audio

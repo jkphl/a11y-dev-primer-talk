@@ -1,12 +1,11 @@
 # Barrierefreiheit bei digitalen Produkten
 
-> Vortrag auf dem Zertifikatslehrgang "Inklusive Kultureinrichtungen – das Museum", 14. Juli 2021<br/>
+> Vorgetragen für Bayerische Museumsakademie am 20. Juli 2021<br/>
 > Vortragsfolien (Deutsch)
 
 ___
 
-Die Vortragsfolien sind online verfügbar unter [https://jkphl.is/slides/museen/a11y](https://jkphl.is/slides/museen/a11y).
-
+Die Vortragsfolien sind online verfügbar unter [https://jkphl.is/slides/mpz/a11y](https://jkphl.is/slides/mpz/a11y).
 
 #### Tastaturkürzel
 
