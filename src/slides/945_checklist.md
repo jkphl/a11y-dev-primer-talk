@@ -1,6 +1,5 @@
 ---
 title: "Checkliste"
-css: content
 theme: tertiary
 ---
 ## Checklisten
