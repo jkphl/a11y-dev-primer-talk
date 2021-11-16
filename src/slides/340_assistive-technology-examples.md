@@ -22,6 +22,6 @@ theme: tertiary
         <ul>
             <li>Leichte / Einfache Sprache</li>
             <li>Illustrationen &amp; Schaubilder</li>
-        <ul>
+        </ul>
     </dd>
 </dl>
