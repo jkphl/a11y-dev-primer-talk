@@ -8,6 +8,4 @@ beruhen auf **unzureichender redaktioneller oder struktureller Aufbereitung** de
 
 <ul>
     <li>liegen im Verantwortungsbereich von <strong>Webredaktionen</strong></li>
-    <li>Hilfen zur Beseitigung sind z.B. <a href="http://www.webforall.info/wp-content/uploads/2012/12/EURichtlinie_sag_es_einfach.pdf" target="_blank" rel="noreferrer">europäische Richtlinien für leichte Lesbarkeit</a>, <abbr
-                                title="Web Content Accessibility Guidelines">WCAG</abbr></li>
 </ul>

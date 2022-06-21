@@ -1,12 +1,12 @@
 ---
-title: "Alternativtexte"
+title: "Medienalternativen"
 css: content
 theme: tertiary
 ---
-## Alternativtexte
+## Medienalternativen
 
-- Bilder und Grafiken benötigen einen redaktionell gepflegten **Alternativtext**, der als Ersatz dienen kann
-- Faustregel: Kurz, kompakt, mit essenziellen Infos
-- Floskeln vermeiden (z.B. „Foto von …“)
-- Hilfestellung beim Schreiben: [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/)
-- Pluspunkt: <abbr title="Suchmaschinenoptimierung">SEO</abbr>
+- Redaktionell gepflegter **Alternativtext** für Bilder & Grafiken: Kurz, kompakt, mit essenziellen Infos und ohne Floskeln (z.B. „Foto von …“)
+- Untertitel („Captions“) und Audiodeskriptionen für vertonte Videos
+- Transkripte für Video & Audio
+- Gebärdensprachvideos für Audio & vertonte Videos
+- Pluspunkt: Häufig gut für <abbr title="Suchmaschinenoptimierung">SEO</abbr>

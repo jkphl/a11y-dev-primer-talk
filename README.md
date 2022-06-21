@@ -1,11 +1,11 @@
 # Barrierefreiheit bei digitalen Produkten
 
-> Vorgetragen für die GHM am 16. November 2021<br/>
+> Vorgetragen zur Online-Fachtagung der Lebenshilfe am 22. Juni 2022<br/>
 > Vortragsfolien (Deutsch)
 
 ___
 
-Die Vortragsfolien sind online verfügbar unter [https://jkphl.is/slides/ghm/a11y](https://jkphl.is/slides/ghm/a11y).
+Die Vortragsfolien sind online verfügbar unter [https://jkphl.is/slides/lebenshilfe/60jahre](https://jkphl.is/slides/lebenshilfe/60jahre).
 
 #### Tastaturkürzel
 
